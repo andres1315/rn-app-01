@@ -8,7 +8,7 @@ export const RepositoryList = () => {
       data={repositories}
       ItemSeparatorComponent={() => <Text />}
       renderItem={({ item: repo }) => (
-        ReposityItem({ repo })
+        <ReposityItem repo={repo} />
       )}
     />
   )

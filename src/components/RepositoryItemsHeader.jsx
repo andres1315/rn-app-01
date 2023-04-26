@@ -9,7 +9,7 @@ export const RepositoryItemsHeader = ({ ownerAvatarUrl, fullName, description, l
       </View>
       <View style={{ flex: 1 }}>
         <StyledText fontWeight='bold'>{id}</StyledText>
-        <StyledText fontWeight='bold' color='secondary'>{fullName}</StyledText>
+        {/*         <StyledText fontWeight='bold' color='secondary'>{fullName}</StyledText> */}
         <StyledText>{description}</StyledText>
         <StyledText style={styles.language}>{language}</StyledText>
       </View>

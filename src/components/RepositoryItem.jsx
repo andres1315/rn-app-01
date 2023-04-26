@@ -15,7 +15,7 @@ export const ReposityItem = ({ repo }) => {
 const styles = StyleSheet.create({
   container: {
     padding: 20,
-    paddingBottom: 5,
+    paddingBottom: 15,
     paddingTop: 5
   },
   language: {
