@@ -1,10 +1,11 @@
 import { StyleSheet, TextInput, View } from 'react-native'
 
-export function StyledTextInput ({ style = {}, ...props }) {
-  const inputStyles = {
-    ...styles.TextInput,
-    ...style
-  }
+export function StyledTextInput ({ style = {}, error, ...props }) {
+  const inputStyles = [
+    styles.TextInput,
+    style,
+    error && styles.error
+  ]
   return (
     <View>
       <TextInput style={inputStyles} {...props} />
@@ -20,5 +21,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 10,
     marginBottom: 10
+  },
+  error: {
+    borderColor: 'red'
   }
 })

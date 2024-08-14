@@ -1,6 +1,7 @@
 import { Button, StyleSheet, View } from 'react-native'
 import { Formik } from 'formik'
 import { FormikInputValue } from '../components/FormikInputValue'
+import { LoginSchema } from '../dto/loginSchema'
 const initialValues = {
   email: '',
   password: ''
@@ -8,7 +9,7 @@ const initialValues = {
 
 export function LogInPage () {
   return (
-    <Formik initialValues={initialValues} onSubmit={(values) => console.log(values)}>
+    <Formik validationSchema={LoginSchema} initialValues={initialValues} onSubmit={(values) => console.log(values)}>
       {({ handleChange, handleSubmit, values }) => {
         return (
           <View style={styles.form}>
